@@ -4,6 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Marquee } from "@/components/ui/Marquee";
 import { ShinyButton } from "@/components/ui/ShinyButton";
+import Image from "next/image";
+import { PARTNERS } from "@/lib/partners";
 
 export function Hero() {
     return (
@@ -50,10 +52,17 @@ export function Hero() {
 
                 <div className="mt-16 w-full max-w-5xl">
                     <Marquee pauseOnHover className="[--duration:40s]">
-                        {/* Placeholder logos - replicating for marquee effect */}
-                        {["Hospital Ángeles", "Star Médica", "IMSS", "ISSSTE", "Cruz Roja", "Christus Muguerza", "TecSalud", "Pemex"].map((client) => (
-                            <div key={client} className="mx-4 flex items-center justify-center glass-card px-8 py-3 rounded-full">
-                                <span className="text-sm font-semibold text-white/80">{client}</span>
+                        {/* Partner Logos */}
+                        {PARTNERS.map((partner) => (
+                            <div key={partner.name} className="mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 hover:scale-110">
+                                <div className="relative h-12 w-32">
+                                    <Image
+                                        src={partner.logo}
+                                        alt={partner.name}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
                             </div>
                         ))}
                     </Marquee>
