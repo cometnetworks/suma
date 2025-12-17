@@ -68,6 +68,25 @@ export const SpotlightCard = ({
                     background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${spotlightColor}, transparent 40%)`,
                 }}
             />
+            {/* Mobile/Static Fallback Glow */}
+            <div
+                className="pointer-events-none absolute -inset-px opacity-0 transition duration-300 sm:opacity-0"
+                style={{
+                    opacity: 0.15, // Always visible on mobile/default if we remove the sm:opacity-0, but let's make it smarter.
+                    background: `radial-gradient(circle at 50% 50%, ${spotlightColor}, transparent 60%)`, // Center glow
+                }}
+            />
+            {/* We want this ONLY on generic state or if we can detect touch. 
+                 Simplest premium approach: 
+                 Add a subtle permanent bottom-right glow or center glow that is always there but faint. 
+                 Then the spotlight adds to it. 
+             */}
+            <div
+                className="pointer-events-none absolute -inset-px opacity-10 transition duration-300 lg:opacity-0"
+                style={{
+                    background: `radial-gradient(circle at 80% 100%, ${spotlightColor}, transparent 50%)`,
+                }}
+            />
             <div className="relative h-full">{children}</div>
         </div>
     );

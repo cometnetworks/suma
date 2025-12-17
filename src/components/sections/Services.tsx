@@ -21,7 +21,7 @@ export function Services() {
                     </div>
                 </Reveal>
 
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 mb-12 justify-center">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 mb-12 justify-center auto-rows-fr">
                     {SERVICES_DATA.map((service, index) => (
                         <Reveal key={service.title} delay={0.2 + (index * 0.1)} yOffset={30} className="h-full">
                             <SpotlightCard className="h-full bg-white border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group rounded-xl">
