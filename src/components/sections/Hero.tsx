@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
+import { Marquee } from "@/components/ui/Marquee";
+import { ShinyButton } from "@/components/ui/ShinyButton";
 
 export function Hero() {
     return (
@@ -34,19 +36,31 @@ export function Hero() {
                 </Reveal>
 
                 <Reveal delay={0.6} yOffset={20}>
-                    <div className="flex flex-col gap-4 sm:flex-row">
-                        <Button asChild size="lg" className="bg-[#4A7BD0] hover:bg-[#264D96] text-white border-none shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                            <Link href="/contacto">
-                                Agendar Asesoría <ArrowRight className="ml-2 h-4 w-4" />
-                            </Link>
-                        </Button>
-                        <Button asChild size="lg" className="bg-[#FFF200] hover:bg-[#E6D900] text-[#1E1E1E] border-none font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div className="flex flex-col gap-4 sm:flex-row items-center justify-center">
+                        <ShinyButton href="/contacto" className="min-w-[200px]">
+                            Agendar Asesoría
+                        </ShinyButton>
+                        <Button asChild size="lg" className="bg-[#FFF200] hover:bg-[#E6D900] text-[#1E1E1E] border-none font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 min-w-[200px] py-6 h-auto">
                             <Link href="/proyectos">
                                 Ver Proyectos
                             </Link>
                         </Button>
                     </div>
                 </Reveal>
+
+                <div className="mt-16 w-full max-w-5xl">
+                    <Marquee pauseOnHover className="[--duration:40s]">
+                        {/* Placeholder logos - replicating for marquee effect */}
+                        {["Hospital Ángeles", "Star Médica", "IMSS", "ISSSTE", "Cruz Roja", "Christus Muguerza", "TecSalud", "Pemex"].map((client) => (
+                            <div key={client} className="mx-4 flex items-center justify-center glass-card px-8 py-3 rounded-full">
+                                <span className="text-sm font-semibold text-white/80">{client}</span>
+                            </div>
+                        ))}
+                    </Marquee>
+                    <div className="mt-2 text-xs text-white/50 uppercase tracking-widest text-center">
+                        Instituciones que confían en nosotros
+                    </div>
+                </div>
             </div>
         </section>
     );
