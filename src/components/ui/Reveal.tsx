@@ -42,6 +42,7 @@ export const Reveal = ({
                 initial="hidden"
                 animate={mainControls}
                 transition={{ duration, delay, ease: "easeOut" }}
+                className="h-full"
             >
                 {children}
             </motion.div>
