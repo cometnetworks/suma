@@ -4,6 +4,6 @@ export const PARTNERS = [
     { name: "Star Médica", logo: "https://res.cloudinary.com/dzhupgoxk/image/upload/v1765939858/logo-starmedica_y8hxly.png" },
     { name: "ISSSTE", logo: "https://res.cloudinary.com/dzhupgoxk/image/upload/v1765939850/issste_oodkrh.png" },
     { name: "IMSS", logo: "https://res.cloudinary.com/dzhupgoxk/image/upload/v1765939842/IMSS-Logo_rproyw.png" },
-    { name: "Hospital Ángeles", logo: "https://res.cloudinary.com/dzhupgoxk/image/upload/v1765939835/hangeles_ftwfmo.jpg" },
+    { name: "Hospital Ángeles", logo: "https://res.cloudinary.com/dzhupgoxk/image/upload/v1765940645/ha_r2gdpt.webp" },
     { name: "Christus Muguerza", logo: "https://res.cloudinary.com/dzhupgoxk/image/upload/v1765939826/cmuguerza_xg69pz.png" },
 ];
