@@ -34,9 +34,9 @@ export const ShinyButton = ({ children, href, className, onClick }: ShinyButtonP
         },
       }}
       className={cn(
-        "relative rounded-lg px-6 py-3 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow",
+        "relative rounded-full px-6 py-3 font-medium backdrop-blur-xl transition-[box-shadow] duration-300 ease-in-out hover:shadow",
         "bg-black/20 hover:bg-black/30 dark:bg-black/40", // Darker base for contrast
-        "shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]", // Subtle glow
+        "shadow-[0_0_20px_rgba(255,242,0,0.1)] hover:shadow-[0_0_25px_rgba(255,242,0,0.3)]", // Yellow glow
         className
       )}
       onClick={onClick}
@@ -55,7 +55,7 @@ export const ShinyButton = ({ children, href, className, onClick }: ShinyButtonP
           mask: "linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box,linear-gradient(rgb(0,0,0), rgb(0,0,0))",
           maskComposite: "exclude",
         }}
-        className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,rgba(255,255,255,0.1)_calc(var(--x)+20%),rgba(255,255,255,0.8)_calc(var(--x)+25%),rgba(255,255,255,0.1)_calc(var(--x)+100%))] p-px"
+        className="absolute inset-0 z-10 block rounded-[inherit] bg-[linear-gradient(-75deg,rgba(255,242,0,0.1)_calc(var(--x)+20%),rgba(255,242,0,1)_calc(var(--x)+25%),rgba(255,242,0,0.1)_calc(var(--x)+100%))] p-px"
       ></span>
     </motion.button>
   );

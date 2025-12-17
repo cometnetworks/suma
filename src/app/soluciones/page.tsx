@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Card } from "@/components/ui/card";
 import { SERVICES_DATA } from "@/lib/services-data";
 import { Reveal } from "@/components/ui/Reveal";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 
 export default function SolucionesPage() {
     return (
@@ -23,7 +23,7 @@ export default function SolucionesPage() {
                     {SERVICES_DATA.map((service, index) => (
                         <Reveal key={index} delay={0.1 + (index * 0.1)} width="100%">
                             <AccordionItem value={`item-${index}`} className="border-none">
-                                <Card className="overflow-hidden glass-card hover:border-[#00AEEF]/30">
+                                <SpotlightCard className="overflow-hidden glass-card hover:border-[#00AEEF]/30 bg-white/50">
                                     <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-slate-50/50 transition-colors">
                                         <div className="flex items-center gap-4 text-left w-full">
                                             <div className="flex-shrink-0 h-12 w-12 bg-[#00AEEF]/10 rounded-lg flex items-center justify-center p-2">
@@ -57,7 +57,7 @@ export default function SolucionesPage() {
                                             </div>
                                         </div>
                                     </AccordionContent>
-                                </Card>
+                                </SpotlightCard>
                             </AccordionItem>
                         </Reveal>
                     ))}

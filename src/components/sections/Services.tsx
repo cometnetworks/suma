@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SERVICES_DATA } from "@/lib/services-data";
 import { Reveal } from "@/components/ui/Reveal";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 
 export function Services() {
     return (
@@ -23,7 +24,7 @@ export function Services() {
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 mb-12">
                     {SERVICES_DATA.map((service, index) => (
                         <Reveal key={service.title} delay={0.2 + (index * 0.1)} yOffset={30} className="h-full">
-                            <Card className="h-full border-none shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                            <SpotlightCard className="h-full bg-white border-slate-200 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group rounded-xl">
                                 <CardHeader>
                                     <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-lg bg-[#00AEEF]/10 p-3 group-hover:bg-[#00AEEF]/20 transition-colors">
                                         <Image
@@ -41,7 +42,7 @@ export function Services() {
                                         {service.description}
                                     </CardDescription>
                                 </CardContent>
-                            </Card>
+                            </SpotlightCard>
                         </Reveal>
                     ))}
                 </div>

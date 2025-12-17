@@ -42,7 +42,7 @@ export function Hero() {
                         <ShinyButton href="/contacto" className="min-w-[200px]">
                             Agendar Asesoría
                         </ShinyButton>
-                        <Button asChild size="lg" className="bg-[#FFF200] hover:bg-[#E6D900] text-[#1E1E1E] border-none font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 min-w-[200px] py-6 h-auto">
+                        <Button asChild size="lg" className="bg-[#FFF200] hover:bg-[#E6D900] text-[#1E1E1E] border-none font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 min-w-[200px] py-6 h-auto rounded-full">
                             <Link href="/proyectos">
                                 Ver Proyectos
                             </Link>
