@@ -45,12 +45,12 @@ export default function NosotrosPage() {
                                 ))}
                             </div>
                         </div>
-                        <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+                        <div className="relative h-auto w-full aspect-video md:h-[400px] md:aspect-auto rounded-2xl overflow-hidden shadow-2xl">
                             <Image
                                 src="/nosotros.jpg"
                                 alt="Ingeniero revisando equipos médicos"
                                 fill
-                                className="object-cover"
+                                className="object-cover md:object-cover"
                             />
                         </div>
                     </div>
