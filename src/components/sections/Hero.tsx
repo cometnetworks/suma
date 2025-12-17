@@ -5,8 +5,19 @@ import { ArrowRight } from "lucide-react";
 export function Hero() {
     return (
         <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden py-20 text-white" style={{ backgroundColor: '#264D96' }}>
-            {/* Background Overlay */}
-            <div className="absolute inset-0 z-0 bg-gradient-to-br from-[#264D96] via-[#4A7BD0] to-[#264D96] opacity-90" />
+            {/* Background Video */}
+            <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 z-0 h-full w-full object-cover"
+            >
+                <source src="https://res.cloudinary.com/dzhupgoxk/video/upload/v1765932383/suma-video1_ymunjj.mp4" type="video/mp4" />
+            </video>
+
+            {/* Overlay for contrast */}
+            <div className="absolute inset-0 z-0 bg-blue-900/80" />
 
             <div className="container relative z-10 flex flex-col items-center text-center">
                 <h1 className="mb-6 max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
