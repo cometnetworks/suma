@@ -10,7 +10,7 @@ export function Services() {
     return (
         <section className="py-20 bg-slate-50">
             <div className="container mx-auto px-4">
-                <Reveal yOffset={50}>
+                <Reveal yOffset={50} width="100%">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-slate-900">
                             Nuestras Soluciones
