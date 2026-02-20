@@ -1,3 +1,4 @@
+export const dynamic = "force-static";
 import { MetadataRoute } from 'next'
 import { MOCK_PROJECTS } from '@/lib/mock-data'
 

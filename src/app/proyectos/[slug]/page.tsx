@@ -1,4 +1,4 @@
-export const runtime = 'edge';
+export const dynamicParams = false;
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -11,6 +11,12 @@ interface ProjectPageProps {
     params: Promise<{
         slug: string;
     }>;
+}
+
+export function generateStaticParams() {
+    return MOCK_PROJECTS.map((project) => ({
+        slug: project.slug,
+    }));
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {
